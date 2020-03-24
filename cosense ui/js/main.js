@@ -247,10 +247,17 @@ jQuery(document).ready(function($) {
     }
   };
   siteDatePicker();
-  var siteSticky = function() {
-    $(".js-sticky-header").sticky({ topSpacing: 0 });
-  };
-  siteSticky();
+  $(window).scroll(function() {
+    var sticky = $(".js-sticky-header"),
+      scroll = $(window).scrollTop();
+
+    if (scroll >= 100) sticky.addClass("fixed");
+    else sticky.removeClass("fixed");
+  });
+  // var siteSticky = function() {
+  //   $(".js-sticky-header").sticky({ topSpacing: 0 });
+  // };
+  // siteSticky();
   var OnePageNavigation = function() {
     var navToggler = $(".site-menu-toggle");
     $("body").on(

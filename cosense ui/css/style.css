@@ -20,9 +20,11 @@ a {
   -webkit-transition: 0.3s all ease;
   -o-transition: 0.3s all ease;
   transition: 0.3s all ease;
+  color: orange;
 }
 a:hover {
   text-decoration: none;
+  font-weight: bold;
 }
 h1,
 h2,
@@ -84,8 +86,8 @@ body:after {
   box-shadow: none !important;
 }
 .btn.btn-primary {
-  background: #007bff;
-  border-color: #007bff;
+  background: orange;
+  border-color: #000;
   color: #fff;
 }
 .btn.btn-primary:hover {
@@ -143,12 +145,12 @@ body:after {
   }
 }
 .site-footer {
-  padding: 4em 0;
+  padding: 2em 0 0 0;
   background: #333;
 }
 @media (min-width: 768px) {
   .site-footer {
-    padding: 8em 0;
+    padding: 2em 0 0 0;
   }
 }
 .site-footer .border-top {
@@ -293,9 +295,15 @@ body:after {
   left: 0;
   font-size: 20px;
   top: -0.3rem;
-  font-family: icomoon;
-  content: "\e5ca";
   position: absolute;
+}
+.fa-check:before {
+  content: "\f00c";
+  left: 0;
+  font-size: 20px;
+  top: 5px;
+  position: absolute;
+  color: #71bc42;
 }
 .ul-check.white li:before {
   color: #fff;
@@ -344,8 +352,13 @@ body:after {
 }
 .site-navbar .site-logo {
   position: relative;
-  left: 0;
-  top: -5px;
+  left: -170px;
+  top: 0;
+}
+@media (max-width: 768px) {
+  .site-navbar .site-logo {
+    left: 0px;
+  }
 }
 .site-navbar .site-navigation .site-menu {
   margin-bottom: 0;
@@ -380,7 +393,6 @@ body:after {
 }
 .site-navbar .site-navigation .site-menu .has-children > a:before {
   position: absolute;
-  content: "\e313";
   font-size: 16px;
   top: 50%;
   right: 0;
@@ -616,8 +628,6 @@ body:after {
 .site-mobile-menu .site-nav-wrap .arrow-collapse:before {
   font-size: 12px;
   z-index: 20;
-  font-family: icomoon;
-  content: "\f078";
   position: absolute;
   top: 50%;
   left: 50%;
@@ -695,7 +705,8 @@ body:after {
   color: #fff;
 }
 .sticky-wrapper .site-navbar .site-logo a {
-  color: #fff;
+  color: orange;
+  display: inline-flex;
 }
 .sticky-wrapper .site-navbar .site-menu > li > a {
   color: rgba(255, 255, 255, 0.7) !important;
@@ -1074,7 +1085,7 @@ body:after {
   background: #dee2e6;
 }
 .slide-one-item .owl-dots .owl-dot.active span {
-  background: #007bff;
+  background: orange;
 }
 .block-12 {
   position: relative;
@@ -2007,7 +2018,7 @@ body:after {
   text-transform: uppercase;
 }
 .section-title {
-  color: #007bff;
+  color: orange;
   font-size: 40px;
   font-weight: 900;
 }
@@ -2157,7 +2168,7 @@ body:after {
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
   display: inline-block;
-  background: #007bff;
+  background: orange;
 }
 @media (max-width: 991.98px) {
   .custom-direction {
@@ -2259,7 +2270,7 @@ body:after {
 }
 .pricing .price > span > span {
   font-size: 3rem;
-  color: #007bff;
+  color: orange;
 }
 .pricing ul li {
   margin-bottom: 20px;
@@ -2515,4 +2526,50 @@ figure figcaption {
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+}
+.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #e6e6e6;
+  color: #000;
+}
+.sticky-wrapper .site-navbar.fixed .site-logo a {
+  color: orange;
+}
+.sticky-wrapper .site-navbar.fixed .site-menu > li > a {
+  color: #000 !important;
+}
+.sticky-wrapper .site-navbar.fixed .site-menu > li > a.active {
+  color: orange !important;
+}
+.fa-map-marker:before,
+.fa-phone:before,
+.fa-envelope:before {
+  color: orange;
+}
+.text-orange {
+  color: orange;
+}
+.img-logo {
+  width: 100px;
+  height: 60px;
+}
+@media (max-width: 768px) {
+  .img-logo {
+    width: 60px;
+    height: 40px;
+  }
+  .logo-text {
+    top: -3px !important;
+  }
+}
+.logo-text {
+  position: relative;
+  top: 5px;
+  left: -10px;
+}
+.fa-bars:before {
+  color: #000;
 }
